@@ -1,0 +1,55 @@
+@import "src/styles/globals";
+
+.listbox {
+    position: relative;
+    width: 300px;
+    border-bottom: 1px solid $dark-grey;
+
+    &--list-item {
+        @include displayFlex(false);
+
+        align-items: center;
+        background: transparent;
+        border: none;
+        font-size: 16px;
+        justify-content: flex-start;
+        padding: 15px 5px;
+        transition: background-color 0.2s linear;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($background-white, 4);
+        }
+    }
+
+    &--label {
+        color: $blue;
+        font-size: 14px;
+        top: -20px;
+        font-weight: normal;
+        left: 5px;
+        pointer-events: none;
+        position: absolute;
+    }
+
+    &--checkbox {
+        margin-right: 5px;
+    }
+
+    &--checkbox-icon {
+        font-size: 18px;
+    }
+
+    &__invalid {
+        border-color: $red;
+    }
+
+    &__valid {
+        border-color: $green;
+    }
+
+    &__large {
+        width: 600px;
+    }
+}

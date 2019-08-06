@@ -1,0 +1,26 @@
+@import "src/styles/globals";
+
+.layout {
+    @include displayFlex(false);
+
+    background: $background-layout;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--header {
+        order: 1;
+        height: $header-height;
+    }
+
+    &--container {
+        @include displayFlex(false);
+
+        align-items: flex-start;
+        min-height: 750px;
+        order: 2;
+    }
+
+    &--footer {
+        order:3;
+    }
+}

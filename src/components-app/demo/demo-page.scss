@@ -1,0 +1,67 @@
+@import 'src/styles/globals';
+
+.demo-page {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    overflow: hidden;
+
+    &--header {
+        padding: 12px 0px;
+        background: $cian;
+        color: $white;
+        display: flex;
+
+        &-title {
+            margin: auto;
+            font-size: 25px;
+        }
+    }
+
+    &--title {
+        display: block;
+        font-size: 20px;
+        margin: 10px 5px;
+    }
+
+    &--section {
+        margin: 5px;
+
+        &-title {
+            display: block;
+            font-size: 15px;
+            margin: 15px 0;
+        }
+    }
+
+    &--wrapper {
+        display: flex;
+        flex-direction: row;
+        overflow: none;
+    }
+
+    &--side-bar {
+        flex: 0.1;
+        text-align: center;
+    }
+
+    &--content {
+        margin-left: 50px;
+        margin-top: 15px;
+        flex: 0.9;
+    }
+
+    &_no-menu {
+
+        .demo-page {
+
+            &--side-bar {
+                flex: 0;
+            }
+
+            &--content {
+                flex: 1;
+            }
+        }
+    }
+}

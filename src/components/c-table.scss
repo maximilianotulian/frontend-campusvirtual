@@ -1,0 +1,131 @@
+@import "src/styles/globals";
+
+.table {
+    background: transparent !important; //remember to remove this important
+    border-radius: 2px;
+    box-shadow: initial !important; //remember to remove this important
+    display: flex;
+    text-align: left;
+    width: 100%;
+
+    &--wrapper {
+        background: white;
+        width: 100%;
+    }
+
+    &--header {
+        border-bottom: $table-border;
+
+        &-content {
+            @include displayFlex(false);
+
+            font-weight: bold;
+
+            &-item {
+                color: $dark-grey;
+                padding: 2% 1%;
+            }
+        }
+    }
+
+    &--caption {
+        background: white;
+        font-weight: bold;
+        height: 40px;
+        padding-top: 12px;
+    }
+
+    &--actions {
+        .add-button {
+            bottom: 3%;
+            position: absolute;
+            right: 28px;
+
+            &:hover {
+                color: $white;
+                background: red;
+            }
+        }
+    }
+
+    &--body-content {
+        @include displayFlex(false);
+
+        border-bottom: $card-border;
+
+        &-item {
+            padding: 2% 1%;
+            width: 30%;
+        }
+
+        &-actions {
+            @include displayFlex(false);
+
+            align-items: center;
+
+            > div > button,
+            > button {
+                width: 100%;
+
+                &:hover {
+                   color: $light-blue;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: $list-hover;
+        }
+    }
+}
+
+.paginator {
+    @include displayFlex(true);
+
+    background: $white;
+    border-top: $table-border;
+    height: 53px;
+    padding: 0 50px;
+    width: 100%;
+
+    &--actions {
+        @include displayFlex(true);
+
+        order: 2;
+        flex: 0.2;
+
+        &-left,
+        &-rigth,
+        &-item {
+            cursor: pointer;
+
+            &:hover {
+                color: $light-blue;
+            }
+
+            &.disabled {
+                color: $light-blue;
+            }
+        }
+
+        &-item {
+            background: transparent;
+            border: 0;
+            font-size: 13px;
+            margin: 4px;
+            outline: 0;
+            padding: 10px;
+        }
+
+        .selected {
+            color: $blue;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+
+    &--message {
+        order: 1;
+        flex: 0.80;
+    }
+}

@@ -1,0 +1,18 @@
+@import "src/styles/globals";
+
+.menu-item {
+    padding: 16px 0 16px;
+    text-align: center;
+
+    &--icon {
+        padding-right: 32px;
+    }
+
+    &--sub-item {
+        padding-left: 64px;
+    }
+
+    &:hover {
+        background-color: $light-grey;
+    }
+}

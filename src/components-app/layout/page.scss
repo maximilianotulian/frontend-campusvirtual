@@ -1,0 +1,38 @@
+@import "src/styles/globals";
+
+.page {
+    @include displayFlex(false);
+
+    flex-direction: column;
+    width: 100%;
+
+    &--title {
+        @include displayFlex(false);
+
+        padding-left: 22px;
+        padding-top: 20px;
+        font-size: 24px;
+    }
+
+    &--content {
+        @include displayFlex(false);
+        margin: 30px;
+        position: relative;
+        min-height: 75vh;
+    }
+
+    &__display-column {
+        .page--content {
+            flex-direction: column;
+        }
+    }
+
+    &__full-width {
+        @include displayFlex(true);
+
+        .page--content {
+            height: 80vh;
+            width: 85%;
+        }
+    }
+}

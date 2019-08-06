@@ -1,0 +1,111 @@
+@import "src/styles/globals";
+
+.card {
+    background: $white;
+    border-top: $card-border;
+    border-radius: 2px;
+    box-shadow: $box-shadow-card;
+    padding: 16px;
+    position: relative;
+
+    &--header {
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    &--title {
+        color: $black;
+        font-size: $font-size-large;
+        margin-bottom: 5px;
+    }
+
+    &--menu {
+        position: absolute;
+        right: 10px;
+        top: -5px;
+
+        > button {
+            color: $black;
+
+            > i {
+                height: 25px;
+                width: 25px;
+            }
+
+            &:hover {
+                background-color: $list-hover;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &--subtitle {
+        font-size: $font-size-micro;
+        color: $grey;
+    }
+
+    &--image {
+        margin-bottom: 10px;
+
+        &-content {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+    &--content {
+        width: 100%;
+    }
+
+    .modal {
+        border: $card-border;
+        box-shadow: $box-shadow-card;
+        background-color: $white;
+        border-radius: 4px;
+        left: -105px;
+        padding: 20px 0;
+        position: absolute;
+        z-index: $second-layer;
+
+        &--indicator {
+            border-left: $card-border;
+            border-top: $card-border;
+            background-color: $white;
+            height: 16px;
+            position: absolute;
+            right: 15px;
+            top: -8px;
+            transform: rotate(46deg);
+            width: 16px;
+        }
+
+        &--options-item {
+            padding: 10px 20px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($background-white, 4);
+            }
+        }
+    }
+
+    &__no-padding {
+        padding: 0;
+    }
+
+    &__small {
+        .card {
+            &--title {
+                font-size: 20px;
+            }
+
+            &--content {
+                font-size: $font-size-medium;
+            }
+
+            &--image-content {
+                height: 100px;
+            }
+        }
+    }
+}

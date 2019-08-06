@@ -1,0 +1,8 @@
+@import "src/styles/globals";
+
+.login-page {
+    @include displayFlex(true);
+
+    background: $background-layout;
+    height: 100vh;
+}

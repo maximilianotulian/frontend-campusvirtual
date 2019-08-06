@@ -1,0 +1,15 @@
+@import "src/styles/globals";
+
+.header {
+    background: $white;
+    border-bottom: $card-border;
+    box-shadow: $box-shadow-card;
+
+    &--container {
+        height: $header-height;
+    }
+
+    &--menu {
+        max-height: $header-height;
+    }
+}

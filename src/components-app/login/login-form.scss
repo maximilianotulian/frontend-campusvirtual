@@ -1,0 +1,24 @@
+@import "src/styles/globals";
+
+.login-form {
+
+    &--form {
+        padding: 3em 2em 2em 2em;
+        width: 365px;
+    }
+
+    &--button-left {
+        color: $blue;
+    }
+
+    &--button-right {
+        margin-left: 40px;
+    }
+
+    &--login-error {
+        color: red;
+        margin-top: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+}

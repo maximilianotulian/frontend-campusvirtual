@@ -1,0 +1,58 @@
+@import "src/styles/globals";
+
+.footer {
+    background: $white;
+    border-top: $card-border;
+    box-shadow: $box-shadow-card;
+    color: $grey;
+
+    &--container {
+        @include displayFlex(false);
+        align-items: flex-start;
+        padding: 25px 0;
+
+        .container {
+
+            &--logo {
+                width: 30%;
+            }
+
+            &--pages {
+                @include displayFlex(true);
+
+                align-items: flex-end;
+                width: 70%;
+
+                &-info {
+                    width: 33%;
+                }
+            }
+        }
+    }
+
+    .list {
+        margin-top: 4px;
+
+        &--item {
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+
+            &:first-child {
+                font-weight: bold;
+            }
+
+            button {
+                color: $grey;
+                height: 20px;
+                padding: 0;
+                text-align: left;
+                text-decoration: none;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}

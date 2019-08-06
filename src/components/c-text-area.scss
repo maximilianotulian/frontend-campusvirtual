@@ -1,0 +1,45 @@
+@import "src/styles/globals";
+
+.text-area {
+
+    textarea {
+        display: none;
+    }
+
+    &--content {
+        background: white;
+        padding: 10px;
+        -moz-appearance: textfield-multiline;
+        font: medium -moz-fixed;
+        font: -webkit-small-control;
+        overflow: auto;
+        min-height: 100px;
+        resize: both;
+        outline: none;
+
+        b {
+            font-weight: bold;
+        }
+
+        li,
+        ol {
+            list-style: initial;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+}

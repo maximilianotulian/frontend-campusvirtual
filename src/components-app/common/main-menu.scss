@@ -1,0 +1,35 @@
+@import "src/styles/globals";
+
+.main-menu {
+    @include displayFlex(true);
+
+    padding: 8px 0px;
+
+    &--actions {
+        @include displayFlex(false);
+
+        margin-left: auto;
+        position: relative;
+
+        &-arrow {
+            color: $grey;
+            font-size: $font-size-large;
+            margin-left: -8px;
+            padding: 2px 0 0;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .actions--modal {
+            position: absolute;
+            right: 96px;
+            top: 46px;
+        }
+    }
+
+    &_selected {
+        font-weight: bold;
+    }
+}

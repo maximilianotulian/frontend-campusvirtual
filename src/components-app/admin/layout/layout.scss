@@ -1,0 +1,47 @@
+@import "src/styles/globals";
+
+.admin-layout {
+    @include displayFlex(false);
+    
+    flex-direction: column;
+    height: 100%;
+
+    &--header {
+        @include displayFlex(false);
+
+        background-color: $blue;
+        color: $white;
+        height: 70px;
+        line-height: 70px;
+        vertical-align: middle;
+    }
+
+    &--container {
+        @include displayFlex(false);
+
+        height: calc(100% - 56px);
+
+        &-aside {
+            overflow: hidden;
+            width: 20%;
+            transition: width 0.3s linear;
+        }
+        
+        &-content {
+            transition: width 0.3s linear;
+            width: 80%;
+        }
+    }
+
+    &_hidden {
+        .admin-layout--container {
+            &-aside {
+                width: 0;
+            }
+
+            &-content {
+                width: 100%;
+            }
+        }
+    }
+}

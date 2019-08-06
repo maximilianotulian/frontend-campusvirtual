@@ -1,0 +1,17 @@
+@import "src/styles/globals";
+
+.float-button {
+    background: red;
+    border-radius: 50%;
+    bottom: 3%;
+    box-shadow: $box-shadow-strong;
+    color: white;
+    font-size: 25px;
+    height: 56px;
+    width: 56px;
+
+    &:hover {
+        color: $white;
+        background: red;
+    }
+}

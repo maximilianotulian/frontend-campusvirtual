@@ -1,0 +1,34 @@
+@import "src/styles/globals";
+
+.subject-form {
+    //@include displayFlex(false);
+    //
+    //flex: 1;
+    //align-content: space-around;
+    //
+    //&--form {
+    //    flex: 0.25;
+    //
+    //    .form--actions {
+    //        bottom: 10%;
+    //        position: absolute;
+    //        right: 14%;
+    //    }
+    //}
+    //
+    //&--teachers {
+    //    @include displayFlex(false);
+    //
+    //    flex: 0.7;
+    //    justify-content: space-around;
+    //    margin-top: 50px;
+    //
+    //    &-available {
+    //        flex: 0.48;
+    //    }
+    //
+    //    &-assigned {
+    //        flex: 0.48;
+    //    }
+    //}
+}

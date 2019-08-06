@@ -1,0 +1,64 @@
+@import "src/styles/globals";
+
+.news-form {
+    width: 650px;
+
+    &--form {
+        padding-top: 15px;
+
+        .form-control {
+            display: inline-block;
+        }
+
+        .form-control + .form-control {
+            padding-left: 10px;
+        }
+    }
+
+    &--cancel-button {
+        border: 1px solid #f3f1f1;
+        color: gray;
+    }
+}
+
+.full-width {
+    width: 100%;
+
+    input {
+        width: 100%;
+    }
+}
+
+.text-area {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &--toolbar {
+        border: 1px solid #f3f1f1;
+        display: flex;
+        height: 46px;
+        width: 100%;
+        z-index: 1;
+
+        &-item {
+            color: gray;
+            font-size: 20px;
+            padding: 0 12px;
+
+            &:hover {
+                color: darkgray;
+            }
+        }
+
+        &-separator {
+            padding: 16px 3px;
+            border-right: 1px solid #f3f1f1;
+            height: 95%;
+        }
+    }
+
+    &--content {
+        border: 1px solid #f3f1f1;
+    }
+}

@@ -1,0 +1,20 @@
+@import "src/styles/globals";
+
+.logo {
+    @include displayFlex(false);
+    flex-direction: column;
+
+    &--name {
+        color: $orange;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 200px;
+        outline: none;
+    }
+
+    &--copyright {
+        padding-left: 32px;
+        font-size: $font-size-small;
+    }
+}

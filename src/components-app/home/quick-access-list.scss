@@ -1,0 +1,28 @@
+@import "src/styles/globals";
+
+.quick-access-list {
+    .list {
+
+        &--title {
+            padding: 15px 0px 15px 15px;
+        }
+
+        &--sublist {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        &--sublist-item {
+            padding-bottom: 10px;
+
+            &:last-child {
+                padding-bottom: 0px;
+            }
+        }
+
+        &--sublist-item-subtitle {
+            font-size: 12px;
+            color: lighten($black, 10);
+        }
+    }
+}

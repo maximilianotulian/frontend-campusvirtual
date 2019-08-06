@@ -1,0 +1,94 @@
+@import "src/styles/globals";
+
+.aside {
+    @include displayFlex(false);
+
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.38);
+    flex-direction: column;
+    font-family: roboto;
+    z-index: 5;
+
+    &--profile {
+        @include displayFlex(false);
+
+        background: url('http://byrushan.com/projects/ma/1-5-2/angular/img/profile-menu.png') no-repeat left top;
+        background-size: 100%;
+        flex-direction: column;
+        height: 130px;
+        line-height: 100px;
+
+        > div {
+            height: 75%;
+        }
+
+        &-image {
+            color: $light-grey;
+            font-size: 50px;
+            padding-left: 20px;
+            padding-top: 15px;
+        }
+
+        &-info {
+            align-items: center;
+            align-self: flex-end;
+            background-color: rgba(0, 0, 0, 0.37);
+            color: white;
+            display: flex;
+            font-size: $font-size-micro;
+            padding-left: 15px;
+            text-align: left;
+            width: 100%;
+
+            > button {
+                background: transparent;
+                border: none;
+                outline: none;
+                right: 10px;
+
+                > i {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &--menu {
+        border-top: 1px solid $light-grey;
+
+        &-item {
+            cursor: pointer;
+            font-weight: 500;
+            padding: 15px 20px 10px 40px;
+
+            &:first-of-type {
+                margin-top: 20px;
+            }
+
+            &:hover {
+                background-color: $list-hover;
+            }
+        }
+    }
+
+    &--main-menu {
+        border: none;
+        transition: height 0.2s linear;
+        height: 45px;
+
+        .aside--menu-item {
+            &:first-of-type {
+                margin-top: 0px;
+            }
+        }
+
+        &__animating {
+            display: block;
+            overflow: hidden;
+        }
+
+        &__hidden {
+            height: 0;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import "src/styles/globals";
+
+.about-us-page {
+    @include displayFlex(true);
+}

@@ -1,0 +1,15 @@
+@import 'src/styles/globals';
+
+.form-control {
+    margin-bottom: 40px;
+
+    &--invalid-text {
+        color: $red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    &__last {
+        margin-bottom: 10px;
+    }
+}

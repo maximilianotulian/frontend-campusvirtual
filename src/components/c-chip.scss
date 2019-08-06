@@ -1,0 +1,28 @@
+@import 'src/styles/globals';
+
+.chip {
+    @include displayFlex(true);
+
+    align-items: center;
+    background: transparent;
+    color: $grey;
+    cursor: pointer;
+    padding: 0 3px;
+
+    &-wrapper {
+        @include displayFlex(true);
+
+        &--image {
+            border-radius: 50%;
+            font-size: 32px;
+            height: 32px;
+            margin-right: 5px;
+            overflow: hidden;
+            width: 32px;
+        }
+
+        &--description {
+            margin-right: 10px;
+        }
+    }
+}

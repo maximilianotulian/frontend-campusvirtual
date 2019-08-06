@@ -1,0 +1,39 @@
+@import "src/styles/globals";
+
+.sidebar {
+    @include displayFlex(true);
+    background: $white;
+    border-radius: 2px;
+    border: $card-border;
+    flex-direction: column;
+    margin: 13% 0;
+    padding: 0 16px;
+    text-transform: uppercase;
+
+    &--item {
+        @include displayFlex(true);
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+        height: 50px;
+        justify-content: flex-start;
+        width: 100%;
+
+        > i {
+            color: $grey;
+        }
+
+        > span {
+            margin-left: 8px;
+            color: $black;
+        }
+
+        &:hover {
+            background-color: $list-hover;
+        }
+    }
+
+    &--item + .sidebar--item {
+        border-top: $card-border;
+    }
+}

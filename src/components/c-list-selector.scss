@@ -1,0 +1,28 @@
+@import "src/styles/globals";
+
+.list-selector {
+    position: relative;
+    width: 300px;
+    border-bottom: 1px solid $dark-grey;
+
+    &--list-item {
+        @include displayFlex(false);
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 5px;
+        transition: background-color 0.2s linear;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken($background-white, 4);
+        }
+    }
+
+    &--checkbox {
+        margin-right: 5px;
+    }
+
+    &--checkbox-icon {
+        font-size: 18px;
+    }
+}

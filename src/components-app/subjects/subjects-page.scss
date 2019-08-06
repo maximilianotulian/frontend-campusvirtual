@@ -1,0 +1,45 @@
+.subjects-page {
+    &--wrapper {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &--subject {
+        margin: 10px;
+        min-height: 130px;
+        width: 30%;
+
+        &-arrow {
+            cursor: pointer;
+            color: grey;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        &-text {
+            bottom: 15px;
+            color: blue;
+            cursor: pointer;
+            position:absolute;
+        }
+
+        &-icon {
+            color: green;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        &-icon-pending {
+            color: dodgerblue;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+}

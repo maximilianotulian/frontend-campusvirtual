@@ -1,0 +1,34 @@
+@import "src/styles/globals";
+
+
+.drawer {
+    background: $white;
+    border-radius: 4px;
+    box-shadow: $box-shadow-card;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+
+    &--header {
+        @include displayFlex(true);
+
+        justify-content: space-between;
+
+        &-title {
+            justify-content: initial;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 4px;
+            width: 40%;
+        }
+
+        &-trigger {
+            color: $light-grey;
+            text-align: middle;
+        }
+
+        &--content {
+            padding: 10px;
+        }
+    }
+}

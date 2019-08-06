@@ -1,0 +1,5 @@
+@import "src/styles/globals";
+
+.subject-page {
+    @include displayFlex(true);
+}

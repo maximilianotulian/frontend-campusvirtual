@@ -1,0 +1,51 @@
+@import "src/styles/globals";
+
+.feedback {
+    > h1 {
+        font-size: 25px;
+    }
+
+    &--news-list {
+        margin: 10px;
+
+        > div {
+            display:flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &--new {
+        width: 50%;
+        padding: 2%;
+
+        &-title {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 0px 15px 15px;
+        }
+
+        &-new-content {
+            padding: 20px;
+            background: $light-grey;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        &-new-paragraph {
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+
+        &__small {
+            width: 25%;
+            padding: 2%;
+
+            &-title {
+                font-size: 15px;
+                font-weight: bold;
+                padding: 15px 0px 15px 15px;
+            }
+        }
+    }
+}

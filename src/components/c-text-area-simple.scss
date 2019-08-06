@@ -1,0 +1,141 @@
+@import 'src/styles/globals';
+
+.text-area-s {
+    position: relative;
+
+    &--text {
+        background: inherit;
+        border: none;
+        border-bottom: 1px solid $dark-grey;
+        display: block;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: transparent;
+        }
+
+        &:focus ~ .text-area-s--label,
+        &:-webkit-autofill ~ .text-area-s--label {
+            color: $blue;
+            font-size: 14px;
+            top: -20px;
+        }
+
+        &:focus ~ .text-area-s--bar:before,
+        &:focus ~ .text-area-s--bar:after {
+            width: 50%;
+        }
+
+        &:focus ~ .text-area-s--highlight {
+            animation: inputHightLighter 0.3s ease;
+        }
+    }
+
+    &--bar {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        &:before,
+        &:after {
+            background: $blue;
+            bottom: 1px;
+            content: '';
+            height: 2px;
+            position: absolute;
+            transition: all 0.2s ease;
+            width: 0;
+        }
+
+        &:before {
+            left: 50%;
+        }
+
+        &:after {
+            right: 50%;
+        }
+    }
+
+    &--highlight {
+        height: 50%;
+        left: 0;
+        opacity: 0.5;
+        pointer-events: none;
+        position: absolute;
+        top: 25%;
+        width: 50%;
+    }
+
+    &--label {
+        color: $grey;
+        font-size: 18px;
+        font-weight: normal;
+        left: 5px;
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        transition: 0.2s ease all;
+    }
+
+    &__valid {
+
+        .text-area-s--text {
+            border-bottom-color: $green;
+        }
+
+        .text-area-s--text:focus {
+            border-bottom-color: transparent;
+        }
+
+        .text-area-s--bar:before, .text-area-s--bar:after {
+            background: $green;
+        }
+    }
+
+    &__invalid {
+
+        .text-area-s--text {
+            border-bottom-color: $red;
+        }
+
+        .text-area-s--text:focus {
+            border-bottom-color: transparent;
+        }
+
+        .text-area-s--bar:before, .text-area-s--bar:after {
+            background: $red;
+        }
+    }
+
+    &__dirty {
+
+        .text-area-s--label {
+            color: $blue;
+            font-size: 14px;
+            top: -20px;
+        }
+    }
+}
+
+@keyframes inputHightLighter {
+    from {
+        background: $blue;
+    }
+    to {
+        background: transparent;
+        width: 0;
+    }
+}
+
+@keyframes validHighLighter {
+    from {
+        background: $green;
+    }
+    to {
+        background: transparent;
+        width: 0;
+    }
+}

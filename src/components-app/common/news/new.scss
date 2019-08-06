@@ -1,0 +1,14 @@
+.new {
+
+    &--content {
+
+        p {
+            line-height: 20px;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

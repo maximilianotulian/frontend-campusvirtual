@@ -1,0 +1,62 @@
+@import "src/styles/globals";
+
+.search {
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    &--box {
+        border: none;
+        height: 50px;
+        position: relative;
+
+        &-hint {
+            color: grey;
+            left: 12px;
+            position: absolute;
+            top: 17px;
+        }
+
+        &-input {
+            border: none;
+            height: 100%;
+            outline: none;
+            padding: 12px;
+            width: 100%;
+        }
+
+        &-icon {
+            color: $light-grey;
+            font-size: 28px;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+        }
+    }
+
+    &--results {
+        &-loading {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 80px auto;
+        }
+
+        &-content {
+            flex: 1;
+            margin-top: 15px;
+        }
+    }
+
+    &--empty-results {
+        margin: 20px 0;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

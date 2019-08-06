@@ -1,0 +1,24 @@
+@import "src/styles/globals";
+
+.dynamic-form {
+    @include displayFlex(false);
+
+    flex-direction: column;
+    width: 80%;
+
+    &--title {
+        border-bottom: 2px solid $blue;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+    }
+
+    &--form {
+        @include displayFlex(false);
+
+        flex-direction: column;
+        flex: 1;
+        margin-top: 40px;
+    }
+}

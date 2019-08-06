@@ -1,0 +1,136 @@
+@import 'src/styles/globals';
+
+.button {
+    background-color: inherit;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 36px;
+    letter-spacing: .5px;
+    overflow: hidden;
+    padding: 6px;
+    position: relative;
+    width: 125px;
+    z-index: 1;
+
+    &--content {
+        @include displayFlex(true);
+        justify-content: space-between;
+        align-content: center;
+
+        &__iconless {
+            justify-content: center;
+        }
+    }
+
+    &:hover {
+        background-color: $list-hover;
+    }
+
+    &--icon {
+        margin-right: 2px;
+        width: 24px;
+    }
+
+    &__primary {
+        background-color: $orange;
+        border: $orange;
+        color: $white;
+        transition: background-color 0.2s linear, color 0.2s linear;
+        box-shadow: $box-shadow-light;
+
+        &:hover {
+            background-color: $white;
+            color: $orange;
+        }
+    }
+
+    &__secondary {
+        color: $grey;
+        background-color: $white;
+        box-shadow: $box-shadow-light;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__tertiary {
+        background-color: $green;
+        border: $card-border;
+
+        &:hover {
+            background-color: $light-green;
+        }
+    }
+
+    &__link {
+        color: $grey;
+
+        &:hover {
+            background: inherit;
+            color: $orange;
+        }
+    }
+
+    &__small {
+        width: 100px;
+
+        .button--icon {
+            margin-right: 1px;
+        }
+    }
+
+    &__large {
+        width: 150px;
+
+        .button--icon {
+            margin-right: 4px;
+        }
+    }
+
+    &__extra-large {
+        width: 300px;
+        font-size: 18px;
+    }
+
+    &__icon-only {
+        @include displayFlex(true);
+
+        color: white;
+        font-size: 28px;
+        height: auto;
+        outline: none;
+        width: auto;
+
+        .button--icon {
+            font-size: inherit;
+        }
+
+        &:hover {
+            background-color: inherit;
+        }
+    }
+
+    &__xx-large {
+        width: 600px;
+        font-size: 18px;
+    }
+
+    &__extended {
+        width: auto;
+    }
+
+    &__disabled {
+        cursor: default;
+
+        .button--content {
+            color: $grey;
+        }
+
+        &:hover {
+            background-color: inherit;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@import "src/styles/globals";
+
+.admin-abm-container {
+    @include displayFlex(false);
+
+    padding: 50px 0 0 50px;
+}

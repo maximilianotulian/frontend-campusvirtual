@@ -1,0 +1,158 @@
+@import 'src/styles/globals';
+
+.input {
+    position: relative;
+
+    &--text {
+        background: inherit;
+        border: none;
+        border-bottom: 1px solid $dark-grey;
+        display: block;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        width: 300px;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: transparent;
+        }
+
+        &:focus ~ .input--label,
+        &:-webkit-autofill ~ .input--label {
+            color: $blue;
+            font-size: 14px;
+            top: -20px;
+        }
+
+        &:focus ~ .input--bar:before,
+        &:focus ~ .input--bar:after {
+            width: 50%;
+        }
+
+        &:focus ~ .input--highlight {
+            animation: inputHightLighter 0.3s ease;
+        }
+    }
+
+    &--bar {
+        display: block;
+        position: relative;
+        width: 300px;
+
+        &:before,
+        &:after {
+            background: $blue;
+            bottom: 1px;
+            content: '';
+            height: 2px;
+            position: absolute;
+            transition: all 0.2s ease;
+            width: 0;
+        }
+
+        &:before {
+            left: 50%;
+        }
+
+        &:after {
+            right: 50%;
+        }
+    }
+
+    &--highlight {
+        height: 50%;
+        left: 0;
+        opacity: 0.5;
+        pointer-events: none;
+        position: absolute;
+        top: 25%;
+        width: 100px;
+    }
+
+    &--label {
+        color: $grey;
+        font-size: 18px;
+        font-weight: normal;
+        left: 5px;
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        transition: 0.2s ease all;
+    }
+
+    &__valid {
+
+        .input--text {
+            border-bottom-color: $green;
+        }
+
+        .input--text:focus {
+            border-bottom-color: transparent;
+        }
+
+        .input--bar:before, .input--bar:after {
+            background: $green;
+        }
+    }
+
+    &__invalid {
+
+        .input--text {
+            border-bottom-color: $red;
+        }
+
+        .input--text:focus {
+            border-bottom-color: transparent;
+        }
+
+        .input--bar:before, .input--bar:after {
+            background: $red;
+        }
+    }
+
+    &__dirty {
+
+        .input--label {
+            color: $blue;
+            font-size: 14px;
+            top: -20px;
+        }
+    }
+
+    &__disabled {
+        
+        .input--bar:before, .input--bar:after {
+            background: $grey;
+        }
+    }
+
+    &__large {
+        .input--text {
+            width: 600px;
+        }
+
+        .input--bar {
+            width: 600px;
+        }
+    }
+}
+
+@keyframes inputHightLighter {
+    from {
+        background: $blue;
+    }
+    to {
+        background: transparent;
+        width: 0;
+    }
+}
+
+@keyframes validHighLighter {
+    from {
+        background: $green;
+    }
+    to {
+        background: transparent;
+        width: 0;
+    }
+}

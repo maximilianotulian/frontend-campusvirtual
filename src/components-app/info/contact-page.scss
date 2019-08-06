@@ -1,0 +1,5 @@
+@import "src/styles/globals";
+
+.contact-page {
+    @include displayFlex(true);
+}

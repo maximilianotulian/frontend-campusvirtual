@@ -1,0 +1,23 @@
+@import "src/styles/globals";
+
+.frequently-asked-questions {
+    &--title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    &--content {
+        margin: 10px 0;
+
+        &-item {
+            margin-left: 10px;
+        }
+    }
+
+    &--footer {
+        @include displayFlex(false);
+
+        font-size: 15px;
+        margin-top: 30px;
+    }
+}

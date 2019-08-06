@@ -1,0 +1,56 @@
+@import "src/styles/globals";
+
+.line-wrap {
+    cursor: pointer;
+    height: 12px;
+    margin: 28px 20px;
+    transition: all;
+    transition-duration: 300ms;
+    width: 18px;
+
+    &--line {
+        background-color: $white;
+        height: 2px;
+        transition: all;
+        transition-duration: 300ms;
+        width: 18px;
+
+        &.line-middle {
+            margin: 3px 0;
+        }
+    }
+
+    &:before {
+        background-color: rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        content: '';
+        height: 45px;
+        left: -13px;
+        position: absolute;
+        top: -17px;
+        transform: scale(0);
+        transition: all;
+        transition-duration: 300ms;
+        width: 45px;
+    }
+
+    &__animated {
+        transform: rotate(180deg);
+
+        &:before {
+            transform: scale(1);
+        }
+
+        .line {
+            &-top {
+                transform: translateX(8px) translateY(1px) rotate(45deg);
+                width: 12px;
+            }
+
+            &-bottom {
+                transform: translateX(8px) translateY(-1px) rotate(-45deg);
+                width: 12px;
+            }
+        }
+    }
+}

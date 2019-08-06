@@ -1,0 +1,12 @@
+@import 'src/styles/globals';
+
+.teachers-register-page {
+    @include displayFlex(true);
+    
+    margin: 50px;
+
+    &--form {
+        padding: 15px;
+        width: 380px;
+    }
+}

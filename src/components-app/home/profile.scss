@@ -1,0 +1,16 @@
+@import "src/styles/globals";
+
+.profile {
+    &-form {
+        &--form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 700px;
+        }
+        &--cancel-button {
+            position: absolute;
+            right: 250px;
+        }
+    }
+}

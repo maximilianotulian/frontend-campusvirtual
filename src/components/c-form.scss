@@ -1,0 +1,37 @@
+@import "src/styles/globals.scss";
+
+.form {
+
+    &--actions {
+        @include displayFlex(false);
+        margin-top: 20px;
+    }
+
+    &--primary-action-block {
+        flex: 0 0 50%;
+        text-align: right;
+    }
+
+    &--secondary-action-block {
+        flex: 0 0 50%;
+        text-align: left;
+    }
+
+    &__dynamic-form {
+        .form--actions {
+            border-top: 2px solid $blue;
+            margin-top: auto;
+            margin-bottom: 50px;
+            padding-top: 30px;
+            justify-content: flex-end;
+        }
+
+        .form--primary-action-block, .form--secondary-action-block {
+            flex: 0.1;
+        }
+
+        .form--secondary-action-block {
+
+        }
+    }
+}

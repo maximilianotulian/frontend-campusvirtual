@@ -1,0 +1,16 @@
+@import "src/styles/globals";
+
+.home-page {
+    @include displayFlex(false);
+
+    &--feedback {
+        order: 1;
+        width: 65%;
+    }
+
+    &--quick-access-list {
+        margin-top: 50px;
+        width: 30%;
+        order: 2;
+    }
+}

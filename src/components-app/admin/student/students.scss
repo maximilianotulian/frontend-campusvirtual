@@ -1,0 +1,5 @@
+@import "src/styles/globals";
+
+.users {
+    @include displayFlex(true);
+}
