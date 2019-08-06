@@ -1,8 +1,8 @@
-# README #
+# Portal de comunicación para entornos virtuales #
 
 ## Setup inicial ##
 
-1. Clonar el repo **git clone https://USUARIO@bitbucket.org/peecampus/front-end.git**
+1. Clonar el repo
 2. Ir a la carpeta donde se clonó y hacer **npm install**
 3. Copiar el archivo **config.example.js** y renombrarlo a **config.js**. Ahí mismo poner la dirección al backend
 
